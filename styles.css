@@ -7,8 +7,154 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+section {
+    background-color: rgba(245, 245, 245);
+}
+
+.title {
+    font-size: 76px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+}
+
+.title--secondary {
+    color: #1fc31ac7;
+}
+
+.green {
+    color: #1fc31ac7;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.click {
+    transition: all 100ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+/*LANDING PAGE*/
+
+
+#landing-page {
+    min-height: 100vh;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 32px;
+}
+
+.header__para {
+    font-size: 22px;
+    line-height: 2;
+    color: #838486;
+    font-weight: 500;
+    max-width: 450px;
+}
+
+.break__black {
+    color: #242424;
+    font-weight: 600;
+}
+
+.social__list {
+    margin-top: 16px;
+    display: flex;
+}
+
+.social__link {
+    background-color: #1fc31ac7;
+    color: white;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.mail__btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+
+
+}
+
+
+/*NAV*/
+
+
 #personal-logo {
     width: 50px;
     height: 50px;
     filter: invert(1)
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 22px;
+}
+
+.nav__link--list {
+    display: flex;
+}
+
+.nav__link {
+    margin: 0 12px;
+}
+
+.nav__link--anchor {
+    font-size: 16px;
+    color: #242424;
+    font-weight: 700;
+}
+
+.fa-adjust {
+    font-size: 20px;
 }
