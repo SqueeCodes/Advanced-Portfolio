@@ -44,6 +44,7 @@ p {
 }
 
 .click {
+  cursor: pointer;
     transition: all 150ms ease;
 }
 
@@ -53,6 +54,38 @@ p {
 
 .click:active {
     transform: scale(0.8);
+}
+
+input, textarea {
+  width: 100%;
+  background-color: #242424;
+  color: #fff;
+  outline: none;
+  border: 1px solid #c0c4cc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+  transition: all 300ms ease;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+  margin-top: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input:hover, textare:hover {
+  border-color: #dcdfe6;
+}
+
+input:focus, textarea:focus {
+  border-color: #1fc31ac7;
 }
 
 .container {
@@ -337,8 +370,8 @@ nav {
   }
   
   .form__submit {
-    background-color: #f06449;
-    border: 2px solid #f06449;
+    background-color: #1fc31ac7;
+    border: 2px solid #1fc31ac7;
     color: white;
     font-weight: 700;
     width: 100%;
@@ -354,8 +387,8 @@ nav {
   }
   
   .form__submit:active {
-    border-color: #f06449;
-    color: #f06449;
+    border-color: #1fc31ac7;
+    color: #1fc31ac7;
   }
   
   .modal__overlay {
@@ -373,6 +406,7 @@ nav {
   .modal__overlay--loading {
     background-color: #242424;
     font-size: 80px;
+    z-index: -1;
   }
   
   .modal__overlay--success {
