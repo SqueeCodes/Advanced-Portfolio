@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
+<script src="index.js"></script>
 <script type="text/javascript">
    (function(){
       emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY",
+        publicKey: "LaQ1DFRlwXMo-_yhy",
       });
    })();
 </script>
@@ -27,21 +27,20 @@
           <img id="personal-logo" src="./assets/logo.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >About me
-            
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >My Projects</a
-            >
+              class="nav__link--anchor link__hover-effect link__hover-effect--black">
+              My Projects
+            </a>
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -52,7 +51,7 @@
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              ><i class="fas fa-adjust click"></i
+              ><i class="fas fa-adjust click" onclick="toggleContrast()"></i
             ></a>
           </li>
         </ul>
@@ -63,12 +62,12 @@
           <h2 class="title green">I'm Squee.</h2>
           <p class="header__para">
             I'm a <strong class="green">frontend software engineer.</strong
-            ><br />I have a strong passion for Making beautifully crafted
+            ><br/>I have a strong passion for Making beautifully crafted
             websites, with expert functionality on both, mobile and desktop
             devices.
             <span class="break__black"
-              ><br />
-              Here's a bit more <strong class="green">About me.</strong></span
+              ><br/>
+              Here's a bit more <b class="green click" onclick="toggleModal()">About me.</b></span
             >
           </p>
           <div class="social__list">
@@ -89,7 +88,7 @@
               <i class="fas fa-file-pdf"></i>
             </a>
           </header>
-            <button class="mail__btn click">
+            <button class="mail__btn click" onclick="toggleModal()">
                   <i class="far fa-envelope"></i>
               </button>
               <a href="#projects" class="scroll">
@@ -100,13 +99,11 @@
                 <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
                 <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
                 <p class="modal__para">
-                  I'm a 21 year-old Australian <b class="green">frontend software engineer</b> with experience developing
-                  websites for top-tech companies like <b class="green">Google</b> and <b class="green">Canva</b>.
+                  I'm a level 28 year-old <b class="green">frontend software engineer</b> with a serious sense of <b class="green">Purpose</b> crafting beautiful and functional websites
+
                   <br>
-                  I currently solve extremely difficult engineering
-                  problems every day with <b class="green">React</b>, <b class="green">TypeScript</b> and <b
-                    class="green">MobX</b>
-                  in Canva's Video team.
+                  I currently <b class="green">Solve</b> extremely difficult engineering
+                  problems every day with some of the most <b class="green">well-versed </b>and <b class="green">highly educated</b> team of engineers.
                 </p>
                 <div class="modal__languages">
                   <figure class="modal__language">
@@ -151,14 +148,14 @@
                 </div>
               </div>
               <div class="modal__half modal__contact">
-                <i class="fas fa-times modal__exit click"></i>
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">
                   Let's have a chat!
                 </h3>
                 <h3 class="modal__sub-title modal__sub-title--contact">
                   I'm currently open to new opportunities.
                 </h3>
-                <form id="contact__form">
+                <form id="contact__form" onsubmit="contact(event)">
                   <div class="form__item">
                     <label class="form__item--label">Name</label>
                     <input class="input" name="user_name" type="text" required></input>
@@ -182,7 +179,6 @@
                   Thanks for the message! Looking forward to speaking to you soon.
                 </div>
               </div>
-              <i class="fas fa-times modal__exit click"></i>
             </div>
     </section>
     <section id="projects">
